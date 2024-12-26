@@ -20,9 +20,6 @@ public class SparkFirstProgram {
 			final var myRdd = sc.parallelize(data);
 			System.out.printf("Total elements in RDD: %d%n", myRdd.count());
 
-		}catch (Exception e) {
-			e.getMessage();
-			
 		}
 	}
 
