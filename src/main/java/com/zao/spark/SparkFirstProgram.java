@@ -15,7 +15,7 @@ public class SparkFirstProgram {
 				.getOrCreate();
 				final var sc = new JavaSparkContext(spark.sparkContext())) {
 			final var data = Stream.iterate(1, n -> n + 1)
-					.limit(500)
+					.limit(5000000)
 					.collect(Collectors.toList());
 			final var myRdd = sc.parallelize(data);
 			System.out.printf("Total elements in RDD: %d%n", myRdd.count());
